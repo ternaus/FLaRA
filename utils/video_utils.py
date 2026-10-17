@@ -104,7 +104,6 @@ def extract_sliding_windows(
         all_frames_raw = vr.get_batch(sorted_unique).asnumpy()
         del vr
 
-        # --- Transform all unique frames in one call ---
         transformed = transform(images=all_frames_raw)['images']
         del all_frames_raw
 
